@@ -19,7 +19,6 @@ public class CatTest {
         String expectedResult = "Мяу";
 
         String actualResult = cat.getSound();
-        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -31,7 +30,6 @@ public class CatTest {
 
         Mockito.when(felineMock.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = cat.getFood();
-        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult,actualResult);
     }

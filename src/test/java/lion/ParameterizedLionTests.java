@@ -1,4 +1,4 @@
-package LionTests;
+package lion;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -49,7 +49,6 @@ public class ParameterizedLionTests {
 
         Mockito.when(felineMock.getKittens()).thenReturn(1);
         int actualResult = lion.getKittens();
-        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -61,7 +60,6 @@ public class ParameterizedLionTests {
         boolean expectedResult = hasMane;
 
         boolean actualResult = lion.doesHaveMane();
-        System.out.println(info + String.format(" (actualResult = %s", actualResult + ")"));
 
         assertEquals(expectedResult,actualResult);
     }
@@ -75,7 +73,6 @@ public class ParameterizedLionTests {
         Mockito.when(felineMock.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List <String> actualResult = lion.getFood();
 
-        System.out.printf("actualResult = %s%n", actualResult);
         assertEquals(expectedResult,actualResult);
     }
 }
