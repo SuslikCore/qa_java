@@ -1,12 +1,10 @@
 package AnimalTests;
-
 import com.example.Animal;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 
 @RunWith(Parameterized.class)
@@ -34,7 +32,7 @@ public class ParameterizedAnimalTest {
         List<String> expectedResult = foodType;
 
         List<String> actualResult = animal.getFood(animalType);
-        System.out.println(String.format("actualResult = %s", actualResult));
+        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult, actualResult);
     }

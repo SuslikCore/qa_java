@@ -13,7 +13,7 @@ public class SingleAnimalTests {
         String expectedResult = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
 
         String actualResult = animal.getFamily();
-        System.out.println(String.format("actualResult = %s", actualResult));
+        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult, actualResult);
     }
@@ -25,7 +25,7 @@ public class SingleAnimalTests {
             animal.getFood("asd");
             fail("Expected an Exception to be thrown");
         } catch (Exception e) {
-            System.out.println(String.format("Текст ошибки - %s", e.getMessage()));
+            System.out.printf("Текст ошибки - %s%n", e.getMessage());
             assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник",e.getMessage());
 
         }

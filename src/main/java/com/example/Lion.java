@@ -5,7 +5,7 @@ import java.util.List;
 public class Lion {
 
     /// убрал экзэмляр класса feline и заменил ее на приватное поле
-    private Feline feline;
+    private final Feline feline;
     boolean hasMane;
 
     /// Добавил в контруктор параметр Feline

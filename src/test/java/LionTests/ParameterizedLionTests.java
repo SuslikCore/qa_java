@@ -9,11 +9,9 @@ import org.junit.runners.Parameterized;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
 import java.util.List;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+
 
 @RunWith(Parameterized.class)
 public class ParameterizedLionTests {
@@ -51,7 +49,7 @@ public class ParameterizedLionTests {
 
         Mockito.when(felineMock.getKittens()).thenReturn(1);
         int actualResult = lion.getKittens();
-        System.out.println(String.format("actualResult = %s", actualResult));
+        System.out.printf("actualResult = %s%n", actualResult);
 
         assertEquals(expectedResult,actualResult);
     }
@@ -77,7 +75,7 @@ public class ParameterizedLionTests {
         Mockito.when(felineMock.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List <String> actualResult = lion.getFood();
 
-        System.out.println(String.format("actualResult = %s", actualResult));
+        System.out.printf("actualResult = %s%n", actualResult);
         assertEquals(expectedResult,actualResult);
     }
 }
